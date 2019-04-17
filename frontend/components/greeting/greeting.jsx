@@ -1,16 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SongIndexItem from './../songs/song_index_item';
 
-const Greeting = ({ currentUser, logout }) => {
-  const sessionLinks = () => (
+class Greeting extends React.Component { 
+  constructor(props) {
+    super(props)
+  }
+ 
+  sessionLinks() {
 
-    <div>
+    return (<div>
 
     <div className="concert-image">
     <div>
        <Link to={"/"}><div className="cloud-image">
         
       </div>
+
       </Link> 
       <h2 className="brand" >WaveCloud</h2>
     </div>
@@ -38,11 +44,21 @@ const Greeting = ({ currentUser, logout }) => {
       </form>
     </div>
   
-  </div>
+  </div>)
 
-  );
-  const homePage = () => (
-    <div>
+  };
+
+  componentDidMount() {
+    this.props.fetchsongs();
+  }
+
+  homePage() {
+
+    let songs = this.props.songs.map((song) => {
+      return <SongIndexItem  song={song} key={song.id} />
+    })
+
+    return (<div>
     <header className="control-panel">
 
       <div className="cloud-box">
@@ -56,19 +72,24 @@ const Greeting = ({ currentUser, logout }) => {
       </div>
 
       <div className="logout-button-box">
-        <button className="panel-button" onClick={logout}>Log Out</button>
+        <button className="panel-button" onClick={this.props.logout}>Log Out</button>
       </div>
       
-      
     </header>
-    <hgroup className="header-group">
-      
 
-    </hgroup>
-    </div>
-  );
+    <section>
+      <ul>{songs}</ul>
+    </section>
+  
+    </div>)
+  };
+
+  render() {
+    return this.props.currentUser ? this.homePage() : this.sessionLinks();
+  }
     
-  return currentUser ? homePage() : sessionLinks();
+  
+
 };
 
 

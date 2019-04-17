@@ -1,4 +1,4 @@
-import * as ApiUtil from './../actions/song_actions';
+import * as ApiUtil from './../util/song_api_util';
 
 export const RECEIVE_SONG = "RECEIVE_SONG";
 export const RECEIVE_SONGS = "RECEIVE_SONGS";
@@ -33,7 +33,7 @@ export const fetchSong = (id) => {
   };
 };
 
-export const fetchSongs = () => {
+export const fetchsongs = () => {
   return (dispatch) => {
     return ApiUtil.fetchSongs().then((songs) => {
       return dispatch(receiveSongs(songs));

@@ -22,10 +22,19 @@ User.create!(
 User.create!(
   username: "Chris de Burgh",
   password: "123456"
+)
 
+User.create!(
+  username: "The Four Seasons",
+  password: "123456"
 )
 
 Song.create!(
   song_name: "Lady in Red",
   artist_id: 3
+)
+
+Song.create!(
+  song_name: "Oh What A Night! [FreeJ Remix]",
+  artist_id: 4
 )

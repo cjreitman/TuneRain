@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import { fetchSong } from './util/song_api_util';
-
 document.addEventListener("DOMContentLoaded", () => {
   let store;
   if (window.currentUser) {
@@ -22,8 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 
-
-  window.fetchSong = fetchSong;
   window.dispatch = store.dispatch;
 
 });
