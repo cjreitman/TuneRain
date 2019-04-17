@@ -27,7 +27,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+# gem 'aws-s3', :require => 'aws/s3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -62,3 +62,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+

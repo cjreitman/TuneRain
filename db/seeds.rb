@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.delete_all
+Song.delete_all
 
 User.create!(
   username: 'guest',
@@ -16,4 +17,15 @@ User.create!(
 User.create!(
   username: "Colin", 
   password: "123456"
+)
+
+User.create!(
+  username: "Chris de Burgh",
+  password: "123456"
+
+)
+
+Song.create!(
+  song_name: "Lady in Red",
+  artist_id: 3
 )

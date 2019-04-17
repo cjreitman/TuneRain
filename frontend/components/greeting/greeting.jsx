@@ -41,14 +41,34 @@ const Greeting = ({ currentUser, logout }) => {
   </div>
 
   );
-  const personalGreeting = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Welcome to WaveCloud, {currentUser.username}</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
-  );
+  const homePage = () => (
+    <div>
+    <header className="control-panel">
 
-  return currentUser ? personalGreeting() : sessionLinks();
+      <div className="cloud-box">
+        <div className="panel-cloud"></div>
+      </div>
+
+      <div className="panel-buttons">
+        <Link to="/"><button className="panel-button">Home</button></Link>
+        <Link to="/"><button className="panel-button">Stream</button></Link>
+        <Link to="/"><button className="panel-button">Library</button></Link>
+      </div>
+
+      <div className="logout-button-box">
+        <button className="panel-button" onClick={logout}>Log Out</button>
+      </div>
+      
+      
+    </header>
+    <hgroup className="header-group">
+      
+
+    </hgroup>
+    </div>
+  );
+    
+  return currentUser ? homePage() : sessionLinks();
 };
 
 

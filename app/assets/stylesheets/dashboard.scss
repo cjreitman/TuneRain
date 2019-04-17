@@ -1,0 +1,47 @@
+
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  height: 45px;
+  width: 100%;
+}
+
+.cloud-box {
+  display: flex;
+  justify-content: center;
+  height: inherit;
+  width: 65px;
+  background-color: orangered;
+  margin-left: 100px;
+}
+
+.panel-cloud {
+  background: image-url("cloud.png");
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+}
+
+.panel-buttons {
+  // padding: 14px;
+  
+}
+
+.panel-button {
+  padding: 14px;
+  width: 100px;
+  background: transparent;
+  // border: none;
+  border-width: 1px;
+  border-color: white;
+  cursor: pointer;
+  // margin-top: 1px;
+  color: white;
+  font-weight: bold;
+}
+
+
+

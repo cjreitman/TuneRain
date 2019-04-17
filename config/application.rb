@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Wacl1
   class Application < Rails::Application
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
@@ -15,5 +16,13 @@ module Wacl1
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    
+    # AWS::S3::Base.establish_connection!(
+    #   :access_key_id     => 'AKIAJPOKMWNHQ4P67YBA',
+    #   :secret_access_key => 'UZy46O8YQu1i3xRZ24tkhJzv1QJ1O8TotBtbtbJF'
+    # )
+
+    # BUCKET = 'waclmusic'
+
   end
 end
