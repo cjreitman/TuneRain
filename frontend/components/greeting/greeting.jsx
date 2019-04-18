@@ -18,7 +18,7 @@ class Greeting extends React.Component {
       </div>
 
       </Link> 
-      <h2 className="brand" >WaveCloud</h2>
+       <Link to="/" style={{ textDecoration: 'none', color: 'white' }} ><h2 className="brand" >WAVECLOUD</h2></Link> 
     </div>
     
     
@@ -35,7 +35,7 @@ class Greeting extends React.Component {
     WaveCloud gives you space to create, 
     find your fans, and connect with other artists.
     </p>
-    <div className="button-wrapper"><button className="upload-button">Start uploading now</button></div>
+    <div className="button-wrapper"> <Link to="signup"><button className="upload-button">Start uploading today</button></Link> </div>
     
     <div className="header-search-box">
       <form className="header-search">

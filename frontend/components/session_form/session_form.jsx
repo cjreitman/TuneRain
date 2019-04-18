@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import DemoLogin from './demo_login_button';
 import { Link } from 'react-router-dom';
+import GreetingContainer from './../greeting/greeting_container';
+
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="error-list">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -53,44 +54,60 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      
-      <div className="modal is-open">
-        <form className="modal-form" onSubmit={this.handleSubmit}>
-        <Link to="/"><span className="modal-close js-modal-close">x</span></Link>  
-          <br/>
-          Please {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
-          <div className="login-form">
-            <div>
-            </div>
-            <br/>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} /> 
-            <br/>
-            <br/>
-            <button className="guest-button" onClick={this.demo} >Try it as a Guest</button>
-          </div>
-        </form>
+        <>
         
-      </div>
-
+        <Link to="/"><span className="modal-close">&times;</span></Link> 
+        <GreetingContainer/>
+        <div className="modal-open">
+        <div className="opacity">
+          <form className="modal-form" onSubmit={this.handleSubmit}>
+           
+            <br/>
+            Please {this.props.formType} 
+            
+            <div className="login-form">
+              <div>
+              </div>
+              <br/>
+              <label>
+                <input type="text"
+                  placeholder="Username"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                />
+              </label>
+              <br/>
+              <br/>
+              <label>
+                <input type="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+              </label>
+              
+              <br/>
+              <br/>
+              <input className="session-submit" type="submit" value={this.props.formType} /> 
+              <br/>
+              <br/>
+              <button className="guest-button" onClick={this.demo} >Try it as a Guest</button>
+              <br/>
+              <br/>
+              <div className="alternate">
+                or {this.props.navLink}
+              </div>
+              
+            </div>
+            {this.renderErrors()}
+          </form>
+        </div>
+        </div>
+        </>
+        
+      
 
     );
   }
