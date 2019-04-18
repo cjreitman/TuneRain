@@ -1,4 +1,6 @@
 import React from 'react';
+import ControlPanel from './../greeting/control_panel';
+import SessionLinks from './../greeting/session_links';
 
 class UserShow extends React.Component {
 
@@ -11,10 +13,20 @@ class UserShow extends React.Component {
     this.props.fetchuser(this.props.match.params.artistId);
   }
 
+  showPage() {
+    return (
+      <>
+        <ControlPanel logout={this.props.logout} />
+      </>
+    )
+  }
+
   render() {
- 
-    return <div>hi there</div>
-    
+    if (this.props.currentUser) {
+      return this.showPage()
+    } else {
+      return <SessionLinks/>;
+    }
   }
 
 }
