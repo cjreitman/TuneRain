@@ -10,10 +10,10 @@ const receiveUsers = (users) => {
   });
 };
 
-const receiveUser = (user) => {
+const receiveUser = (payload) => {
   return ({
     type: RECEIVE_USER,
-    user: user
+    payload: payload
   });
 };
 
@@ -27,8 +27,8 @@ export const fetchusers = () => {
 
 export const fetchuser = (id) => {
   return (dispatch) => {
-    return ApiUtil.fetchUser(id).then((user) => {
-      return dispatch(receiveUser(user));
+    return ApiUtil.fetchUser(id).then((payload) => {
+      return dispatch(receiveUser(payload));
     });
   };
 };

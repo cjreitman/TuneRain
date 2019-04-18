@@ -1,0 +1,37 @@
+
+
+.profile-header {
+  margin-left: 99px;
+  width: 80%;
+  height: 260px;
+  position: absolute;
+  background-color: rgb(255, 240, 242);
+}
+
+.profile-username-box {
+  margin-top: 50px;
+  margin-left: 250px;
+  // background-color: black;
+  color: white;
+  width: 175px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.profile-username {
+  background-color: rgb(48,48,48);
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: -15px;
+}
+
+.profile-pic {
+  display: inline-flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background: image-url("chris.jpg");
+  height: 100px;
+  width: 100px;
+  margin-left: 75px;
+}

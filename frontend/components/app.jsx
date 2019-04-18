@@ -18,7 +18,7 @@ const App = () => (
       <Route exact path="/" component={GreetingContainer}/>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      <Route exact path="/wavecloud/:artistId" component={UserShowPageContainer} />
+      <ProtectedRoute exact path="/wavecloud/:artistId" component={UserShowPageContainer} />
       <Route component={NoMatch} />
     </Switch>
   </div>

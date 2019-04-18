@@ -6,7 +6,6 @@ class UserShow extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = this.props.user;
   }
 
   componentDidMount() {
@@ -17,15 +16,26 @@ class UserShow extends React.Component {
     return (
       <>
         <ControlPanel logout={this.props.logout} />
+        <div className="profile-header">
+          <div className="profile-username-box">
+            <h3 className="profile-username">{this.props.user.username}</h3>
+          </div>
+          <div className="profile-pic"></div>
+        </div>
+
+        <div className="spotlight">
+
+        </div>
+
       </>
     )
   }
 
   render() {
-    if (this.props.currentUser) {
+    if (this.props.user) {
       return this.showPage()
     } else {
-      return <SessionLinks/>;
+      return <SessionLinks/>; 
     }
   }
 

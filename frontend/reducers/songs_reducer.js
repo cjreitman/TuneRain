@@ -1,4 +1,5 @@
 import { RECEIVE_SONG, RECEIVE_SONGS, REMOVE_SONG } from '../actions/song_actions';
+import { RECEIVE_USER } from './../actions/user_actions';
 import { merge } from 'lodash';
 
 const songsReducer = (state = {}, action) => {
@@ -7,6 +8,9 @@ const songsReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_SONGS:
       return action.payload.songs;
+    case RECEIVE_USER: 
+      newState = merge({}, state, action.payload.songs);
+      return newState;  
     case RECEIVE_SONG:
       newState = merge({}, state, { [action.song.id]: action.song });
       return newState;

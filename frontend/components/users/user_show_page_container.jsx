@@ -4,11 +4,10 @@ import { fetchuser } from './../../actions/user_actions';
 import { logout } from './../../actions/session_actions';
 
 const msp = (state, ownProps) => {
-  
-  // let userId = ownProps.match.params.artistId;
-  // let user = state.users[userId];
+  let userId = ownProps.match.params.artistId;
+  let user = state.entities.users[userId];
   return ({
-    // user: user
+    user: user,
     currentUser: state.entities.users[state.session.id]
   });
 };
