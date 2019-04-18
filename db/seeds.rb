@@ -9,32 +9,32 @@
 User.delete_all
 Song.delete_all
 
-User.create!(
+user1 = User.create!(
   username: 'guest',
   password: 'password'
 )
 
-User.create!(
+user2 = User.create!(
   username: "Colin", 
   password: "123456"
 )
 
-User.create!(
+user3 = User.create!(
   username: "Chris de Burgh",
   password: "123456"
 )
 
-User.create!(
+user4 = User.create!(
   username: "The Four Seasons",
   password: "123456"
 )
 
-Song.create!(
+song1 = Song.create!(
   song_name: "Lady in Red",
-  artist_id: 3
+  artist_id: user3.id
 )
 
-Song.create!(
+song2 = Song.create!(
   song_name: "Oh What A Night! [FreeJ Remix]",
-  artist_id: 4
+  artist_id: user4.id
 )
