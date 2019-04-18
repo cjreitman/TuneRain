@@ -11,10 +11,10 @@ const receiveSong = (song) => {
   });
 };
 
-const receiveSongs = (songs) => {
+const receiveSongs = (payload) => {
   return ({
     type: RECEIVE_SONGS,
-    songs: songs
+    payload: payload
   });
 };
 
@@ -35,8 +35,8 @@ export const fetchSong = (id) => {
 
 export const fetchsongs = () => {
   return (dispatch) => {
-    return ApiUtil.fetchSongs().then((songs) => {
-      return dispatch(receiveSongs(songs));
+    return ApiUtil.fetchSongs().then((payload) => {
+      return dispatch(receiveSongs(payload));
     });
   };
 };
@@ -51,7 +51,7 @@ export const createSong = (user_id, song) => {
 
 export const updateSong = (song) => {
   return (dispatch) => {
-    return ApiUtil.createSong(song).then((song) =>{
+    return ApiUtil.updateSong(song).then((song) =>{
       return dispatch(receiveSong(song));
     });
   };

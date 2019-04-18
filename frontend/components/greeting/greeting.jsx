@@ -25,7 +25,7 @@ class Greeting extends React.Component {
     <nav className="login-signup">
       <Link to="/login"><button className="sign-in-button">Sign in</button></Link>
       <Link to="/signup"><button className="create-account-button" >Create account</button></Link>
-      <Link to="/"> <button className="creators-button" >For Creators</button> </Link>
+      <Link to="/" style={{ textDecoration: 'none', color: 'white' }}> <button className="creators-button" >For Creators</button> </Link>
     </nav>
 
   </div>
@@ -40,7 +40,8 @@ class Greeting extends React.Component {
     <div className="header-search-box">
       <form className="header-search">
         <input className="header-search-bar" placeholder="Search for artists, bands, tracks, podcasts" type="search"></input>
-        <button className="header-search-submit" type="submit">Search</button> or <button className="up-button">Upload your own</button>
+        {/* <button className="header-search-submit" type="submit"></button>  */}
+        or <button className="up-button">Upload your own</button>
       </form>
     </div>
   
@@ -53,9 +54,8 @@ class Greeting extends React.Component {
   }
 
   homePage() {
-
     let songs = this.props.songs.map((song) => {
-      return <SongIndexItem  song={song} key={song.id} />
+      return  <div key={song.id} ><SongIndexItem  song={song}  /> <div> by <Link to={`/wavecloud/${song.artist_id}`} >{this.props.users[song.artist_id].username}</Link> </div> </div>  
     })
 
     return (<div>
