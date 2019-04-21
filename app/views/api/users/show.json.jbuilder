@@ -4,6 +4,8 @@ end
 
 json.songs do 
   @user.songs.each do |song|
-    json.extract! song, :artist_id, :song_name
+    json.set! song.id do
+      json.extract! song, :artist_id, :song_name
+    end  
   end
 end
