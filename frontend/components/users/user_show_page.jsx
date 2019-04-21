@@ -45,9 +45,6 @@ class UserShow extends React.Component {
             <button className="social-button">message</button>
           </div>
 
-          <div>sarst</div>
-
-
         </div>
 
         <h4 className="spotlight-banner">Spotlight</h4>
@@ -56,6 +53,10 @@ class UserShow extends React.Component {
           <ul>
             {songObs}
           </ul>
+
+          <div className="follower-box">
+          </div>
+
         </div>
 
       </>
