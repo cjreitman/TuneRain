@@ -1,19 +1,31 @@
 
 .control-panel {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(48,48,48);
-  height: 45px;
-  width: 100%;
+  background-color: rgb(51,51,51);
+  height: 46px;
+  width: 100vw;
+  // margin-left: 50px;
+  // min-width: 1200px;
+  // max-width: 1260px;
+  font-size: 15px;
+  font-weight: lighter;
+  color: rgb(204, 204, 204);
+}
+
+.panel-box {
+  background: transparent;
+  width: 1200px;
+  margin: auto;
+  // margin-left: 50px;
 }
 
 .cloud-box {
   display: flex;
   justify-content: center;
-  height: inherit;
-  width: 75px;
+  height: 46px;
+  width: 69px;
   background-color: orangered;
   margin-left: 25px;
+  float: left;
 }
 
 .panel-cloud {
@@ -26,31 +38,23 @@
 }
 
 .panel-buttons {
-  // padding: 14px;
-  
+  float: left;
+  margin-left: 10px;
 }
 
 .panel-button {
   padding: 14px;
-  width: 100px;
+  width: 60px;
   background: transparent;
   border: none;
-  // border-width: 1px;
-  // border-color: white;
   cursor: pointer;
-  // margin-top: 1px;
   color: lightgrey;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 .header-search-box1 {
-  width: 25%
-}
-
-.panel-search1 {
-  // display: inline-block;
-  // margin: auto;
-  // width: 70%;
+  width: 25%;
+  float: left;
 }
 
 .panel-search-bar1 {
@@ -68,20 +72,70 @@
 
 .right-panel-button {
   padding: 14px;
-  width: 75px;
+  width: 30px;
   background: transparent;
   border: none;
-  // border-width: 1px;
-  // border-color: white;
   cursor: pointer;
-  // margin-top: 1px;
+  color: rgb(204, 204, 204);
+  // font-weight: bold;
+  font-weight: lighter;
+  float: left;
+  margin-left: 25px;
+
+}
+
+// .right-button-box {
+  
+// }
+
+.dropbtn {
+  background-color: transparent;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  // color: lightgrey;
+  color: rgb(204, 204, 204);
+  margin-left: 20px;
+  font-weight: lighter;
+}
+
+// .dropbtn:hover, .dropbtn:focus {
+  
+// }
+
+.dropdown {
+  float: left;
   color: lightgrey;
   font-weight: bold;
-  margin-right: 5px;
 }
 
-.right-button-box {
-  // margin-right: 40px;
-  // margin-left: -60px;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(17, 17, 17);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
+.dropdown-content a {
+  color: rgb(204, 204, 204);
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+
+.dropdown-content a:hover {
+  background-color: darkgrey;
+}
+
+.show {
+  display:block;
+}
+
+.app-container {
+  // margin: auto;
+  // width: 100vw;
+}

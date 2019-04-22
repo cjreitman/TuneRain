@@ -22,43 +22,49 @@ class UserShow extends React.Component {
 
     return (
       <>
-        <ControlPanel logout={this.props.logout} />
-        <div className="profile-header">
-          <div className="profile-username-box">
-            <h3 className="profile-username">{this.props.user.username}</h3>
-          </div>
-          <div className="profile-pic"></div>
-        </div>
-
-        <div className="banner-buttons">
-        
-          <ul className="show-page-links">
-            <li><Link to=""><button className="show-page-link">All</button></Link></li>
-            <li><Link to=""><button className="show-page-link">Tracks</button></Link></li>
-            <li><Link to=""><button className="show-page-link">Albums</button></Link></li>
-            <li><Link to=""><button className="show-page-link">Playlists</button></Link></li>
-            <li><Link to=""><button className="show-page-link">Reposts</button></Link></li>
-          </ul>
-
-          <div className="social-buttons">
-            <button className="social-button1">Follow</button>
-            <button className="social-button">Share</button>
-            <button className="social-button">message</button>
+        <ControlPanel logout={this.props.logout} currentUser={this.props.currentUser}/>
+        <div className="profile-wrapper"> 
+          <div className="profile-header">
+            <div className="profile-username-box">
+              <h3 className="profile-username">{this.props.user.username}</h3>
+            </div>
+            <div className="profile-div" ></div>
+            <div className="profile-pic"></div>
           </div>
 
-        </div>
+          <div className="button-div">
 
-        <div className="follower-box"></div>
+            <div className="banner-buttons">
+            
+              <ul className="show-page-links">
+                <li><Link to=""><button className="show-page-link">All</button></Link></li>
+                <li><Link to=""><button className="show-page-link">Tracks</button></Link></li>
+                <li><Link to=""><button className="show-page-link">Albums</button></Link></li>
+                <li><Link to=""><button className="show-page-link">Playlists</button></Link></li>
+                <li><Link to=""><button className="show-page-link">Reposts</button></Link></li>
+              </ul>
 
-        <h4 className="spotlight-banner">Spotlight</h4>
+            </div>
 
-        <div className="spotlight">
-          <ul>
-            {songObs}
-          </ul>
+            <div className="social-buttons">
+                <button className="social-button1">Follow</button>
+                <button className="social-button">Share</button>
+                <button className="social-button">message</button>
+            </div>
 
-        </div>
+          </div>
 
+          <div className="follower-box"></div>
+
+          <h4 className="spotlight-banner"></h4>
+
+          <div className="spotlight">
+            <ul>
+              {songObs}
+            </ul>
+
+          </div>
+        </div> 
       </>
     )
   }

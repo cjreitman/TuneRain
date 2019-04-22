@@ -12,7 +12,7 @@ class Api::SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    @song.artist_id = params[:artist_id]
+    @song[:song_name] = params[:song][:song_name]
     if @song.save
       render :show
     else
@@ -39,7 +39,7 @@ class Api::SongsController < ApplicationController
   private
 
   def song_params
-    params.require(:song).permit(:artist_id, :song_name)
+    params.require(:song).permit(:artist_id, :song, :song_name)
   end
 
 end

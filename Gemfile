@@ -30,6 +30,7 @@ gem 'jquery-rails'
 # gem 'aws-s3', :require => 'aws/s3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "aws-sdk-s3"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

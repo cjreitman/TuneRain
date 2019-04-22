@@ -20,7 +20,7 @@ class Greeting extends React.Component {
 
     return (<div>
 
-      <ControlPanel logout={this.props.logout}/>
+      <ControlPanel logout={this.props.logout} currentUser={this.props.currentUser}/>
 
       <section>
         <ul>{songs}</ul>

@@ -6,4 +6,6 @@ class Song < ApplicationRecord
     foreign_key: :artist_id,
     class_name: "User"
 
+  has_one_attached :song  
+
 end
