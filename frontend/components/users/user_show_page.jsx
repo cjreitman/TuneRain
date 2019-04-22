@@ -31,6 +31,7 @@ class UserShow extends React.Component {
         </div>
 
         <div className="banner-buttons">
+        
           <ul className="show-page-links">
             <li><Link to=""><button className="show-page-link">All</button></Link></li>
             <li><Link to=""><button className="show-page-link">Tracks</button></Link></li>
@@ -47,15 +48,14 @@ class UserShow extends React.Component {
 
         </div>
 
+        <div className="follower-box"></div>
+
         <h4 className="spotlight-banner">Spotlight</h4>
 
         <div className="spotlight">
           <ul>
             {songObs}
           </ul>
-
-          <div className="follower-box">
-          </div>
 
         </div>
 

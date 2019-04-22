@@ -13,9 +13,7 @@ const ShowIndexItem = (props) => {
           {props.song.song_name}
       </div> 
 
-      <div className="sound-bar-wrapper">
-        
-      </div>
+      <div className="sound-bar-wrapper"></div>
 
       <div className="sound-bar" ></div>
 

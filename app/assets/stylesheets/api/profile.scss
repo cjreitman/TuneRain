@@ -1,17 +1,18 @@
 
-
 .profile-header {
-  margin-left: 99px;
-  width: 80%;
-  min-width: 900px;
+  margin-left: 25px;
+  width: 95%;
+  min-width: 90%;
   height: 260px;
   position: absolute;
-  background-color: rgb(255, 240, 242);
+  background: image-url("coverphoto.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .profile-username-box {
   margin-top: 50px;
-  margin-left: 250px;
+  margin-left: 275px;
   // background-color: black;
   color: white;
   width: 175px;
@@ -39,19 +40,21 @@
 
 .spotlight {
   margin-top: 25px;
-  margin-left: 60px;
+  margin-left: 15px;
 }
 
 .show-page-links {
-  display: flex;
+  // display: flex;
   list-style: none;
   margin-left: 75px;
   font-family: sans-serif;
+  float: left;
 }
 
 .show-page-links > li {
   text-align: center;
   margin-left: 20px;
+  float: left;
 }
 
 .show-page-link {
@@ -61,14 +64,15 @@
 }
 
 .banner-buttons {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
   margin-top: 265px;
-  min-width: 100%;
+  // min-width: 100%;
+  margin-left: -100px;
 }
 
 .social-buttons {
-  margin-right: 175px;
+  margin-right: 100px;
   margin-top: 15px;
 }
 
@@ -93,12 +97,14 @@
 }
 
 .spotlight-banner {
-  margin-left: 135px;
+  margin-left: 55px;
+  margin-top: -500px;
 }
 
 .song-box {
   min-width: 500px;
   margin-bottom: -100px;
+  // clear: both;
 }
 
 .album-cover {
@@ -161,5 +167,5 @@
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 850px;
-  margin-top: -850px;
+  clear: both;
 }
