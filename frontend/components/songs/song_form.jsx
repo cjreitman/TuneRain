@@ -37,21 +37,21 @@ class SongForm extends React.Component {
     return (
       <div>
         <ControlPanel currentUser={this.props.currentUser} logout={this.props.logout} />
-        <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            
-            <input type="file" onChange={this.update("songFile")} />
-          </label>
+        <div className="upload-form">
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              
+              <input type="file" onChange={this.update("songFile")} />
+            </label>
 
-          <label>
-            
-            <input type="text" onChange={this.updateTitle("songName")} />
-          </label>
+            <label>
+              
+              <input type="text" onChange={this.updateTitle("songName")} />
+            </label>
 
-          <input type="submit" value="submit"/>
-        </form>
-      </div>
+            <input type="submit" value="submit"/>
+          </form>
+        </div>
       </div>
     )
   }

@@ -28,18 +28,3 @@ user4 = User.create!(
   username: "The Four Seasons",
   password: "123456"
 )
-
-song1 = Song.create!(
-  song_name: "Lady in Red",
-  artist_id: user3.id
-)
-
-song2 = Song.create!(
-  song_name: "Oh What A Night! [FreeJ Remix]",
-  artist_id: user4.id
-)
-
-song3 = Song.create!(
-  song_name: "All Night Long",
-  artist_id: user3.id
-)

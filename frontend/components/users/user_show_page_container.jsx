@@ -3,6 +3,7 @@ import UserShow from './user_show_page';
 import { fetchuser } from './../../actions/user_actions';
 import { logout } from './../../actions/session_actions';
 import { songSelector } from '../../reducers/selectors/song_selector';
+import { fetchsongs } from './../../actions/song_actions';
 
 const msp = (state, ownProps) => {
   let songs = Object.values(state.entities.songs);
@@ -22,7 +23,8 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch) => {
   return ({
     fetchuser: (id) => dispatch(fetchuser(id)),
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    // fetchsongs: () => dispatch(fetchsongs())
   });
 };
 

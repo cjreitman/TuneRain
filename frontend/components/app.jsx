@@ -9,6 +9,7 @@ import UserShowPageContainer from './users/user_show_page_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import SongFormContainer from './songs/song_form_container';
+import PlayerContainer from './player/player_container';
 
 const App = () => (
   <div className="app-container">
@@ -20,6 +21,11 @@ const App = () => (
       <ProtectedRoute exact path="/wavecloud/:userId/uploadsong" component={SongFormContainer}/>
       <Route component={NoMatch} />
     </Switch>
+
+    <footer>
+      <PlayerContainer/>
+    </footer>
+
   </div>
   
 );

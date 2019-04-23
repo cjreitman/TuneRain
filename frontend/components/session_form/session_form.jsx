@@ -93,11 +93,11 @@ class SessionForm extends React.Component {
               <input className="session-submit" type="submit" value={this.props.formType} /> 
               <br/>
               <br/>
-              <button className="guest-button" onClick={this.demo} >Try it as a Guest</button>
+              <button className="guest-button" onClick={this.demo}>Try it as a Guest</button>
               <br/>
               <br/>
               <div className="alternate">
-                or {this.props.navLink}
+                {this.props.navLink}
               </div>
               
             </div>

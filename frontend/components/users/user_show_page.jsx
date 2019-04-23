@@ -10,14 +10,20 @@ class UserShow extends React.Component {
     super(props);
   }
 
+  playSong(song) {
+    let songPlay = new Audio(song.url);
+    songPlay.play();
+  }
+
   componentDidMount() {
     this.props.fetchuser(this.props.match.params.artistId);
+    // this.props.fetchsongs();
   }
 
   showPage() {
 
     let songObs = this.props.songs.map((song) => {
-      return <ShowIndexItem song={song} key={song.artist_id} artist={this.props.user.username} />
+      return <ShowIndexItem song={song} key={song.id} artist={this.props.user.username} playSong={this.playSong} />
     });
 
     return (

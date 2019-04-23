@@ -16,44 +16,42 @@
 }
 
 .sign-in-button {
-  background-color: Transparent;
-  background-repeat:no-repeat;
-  border-color: white;
+  font-size: 15px;
   cursor:pointer;
-  overflow: hidden;
-  outline:none;
-  border-radius: 3px;
-  padding: 5px;
+  // padding: 5px;
   width: 80px;
   color: white;
-  border-width: 1px;
   height: 30px;
   margin-right: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: solid white;
+  border-radius: 3px;
+  text-align: center;
 }
 
 .create-account-button {
+  font-size: 15px;
   background-color: orangered;
   border: none;
   color: white;
   padding: 8px;
   // font-size: 14px;
-  width: 135px;
+  width: 120px;
   border-radius: 3px;
   cursor: pointer;
+  text-align: center;
 }
 
 .creators-button {
   background-color: Transparent;
-  background-repeat:no-repeat;
   border: none;
   cursor:pointer;
-  overflow: hidden;
-  outline:none;
   padding: 5px;
   width: 90px;
   color: white;
   height: 30px;
-  // font-size: 14px;
+  font-size: 15px;
 }
 
 .concert-image {
@@ -96,6 +94,7 @@
   text-align: center;
   font-size: 22px;
   color: aliceblue;
+  margin-top: 15px;
 }
 
 .session-submit {
@@ -107,7 +106,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  width: 100%;
+  width: 90%;
   border-radius: 5px;
 }
 
@@ -120,15 +119,19 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  width: 100%;
+  width: 81%;
   border-radius: 5px;
 }
 
 .login-input {
-  width: 96%;
+  width: 95%;
   margin-top: 10px;
   border-radius: 5px;
   padding: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 3px; 
 }
 
 .header-search-box {
@@ -198,11 +201,13 @@
   border-radius: 5px;
   cursor: pointer;
   margin-left: 5px;
+  margin-top: 20px;
 }
 
 .alternate {
-  display: flex;
-  justify-content: flex-end;
+  float: right;
+  margin-right: 5px;
+  text-decoration: underline;
 }
 
 .error-list {

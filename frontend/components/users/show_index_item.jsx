@@ -5,7 +5,7 @@ const ShowIndexItem = (props) => {
     <div className="song-box">
       <div className="album-cover"></div> 
 
-      <button className="play-button"></button>
+      <button className="play-button" onClick={() => props.playSong(props.song)}> </button>
 
       <div className="song-name" >
           {props.artist}
@@ -22,5 +22,7 @@ const ShowIndexItem = (props) => {
     </div>
   )
 };
+
+
 
 export default ShowIndexItem;
