@@ -1,12 +1,34 @@
 
 
-.upload-form {
+.upload-form-container {
   width: 500px;
   height: 500px;
   border-width: 1px;
   border-style: solid;
-  border-color: black;
+  border-color: grey;
   border-radius: 3px; 
   margin: auto;
   margin-top: 150px;
+}
+
+.upload-form {
+  margin-top: 200px;
+  margin-left: 2px;
+}
+
+.submit-file {
+  margin-bottom: -200px;
+  margin-left: 150px;
+}
+
+.file-submit-button {
+  margin-top: 50px;
+  background-color: orangered;
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+  color: white;
+  margin-left: -75px;
+  border-radius: 3px;
+  font-size: 20px;
 }

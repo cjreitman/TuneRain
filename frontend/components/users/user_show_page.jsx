@@ -3,6 +3,7 @@ import ControlPanel from './../greeting/control_panel';
 import SessionLinks from './../greeting/session_links';
 import ShowIndexItem from './show_index_item';
 import { Link } from 'react-router-dom';
+import { setcurrentsong } from '../../actions/player_actions';
 
 class UserShow extends React.Component {
 
@@ -11,8 +12,7 @@ class UserShow extends React.Component {
   }
 
   playSong(song) {
-    let songPlay = new Audio(song.url);
-    songPlay.play();
+    setcurrentsong(song.id);
   }
 
   componentDidMount() {
