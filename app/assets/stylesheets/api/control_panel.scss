@@ -1,21 +1,24 @@
 
 .control-panel {
+  justify-content: center;
   background-color: rgb(51,51,51);
   height: 46px;
   width: 100vw;
-  // margin-left: 50px;
-  // min-width: 1200px;
-  // max-width: 1260px;
   font-size: 15px;
   font-weight: lighter;
   color: rgb(204, 204, 204);
+  z-index: 10;
+  position: fixed;
+  margin-top: -45px;
+  top: 45px;
 }
 
 .panel-box {
+  display: flex;
   background: transparent;
   width: 1200px;
+  min-width: 1200px;
   margin: auto;
-  // margin-left: 50px;
 }
 
 .cloud-box {
@@ -40,20 +43,22 @@
 .panel-buttons {
   float: left;
   margin-left: 10px;
+  margin-top: 14px;
+  // margin-right: 10px;
 }
 
 .panel-button {
-  padding: 14px;
   width: 60px;
   background: transparent;
   border: none;
   cursor: pointer;
   color: lightgrey;
-  // font-weight: bold;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .header-search-box1 {
-  width: 25%;
+  width: 30%;
   float: left;
 }
 
@@ -89,6 +94,7 @@
 // }
 
 .dropbtn {
+  display: flex;
   background-color: transparent;
   padding: 14px;
   font-size: 16px;
@@ -96,8 +102,9 @@
   cursor: pointer;
   // color: lightgrey;
   color: rgb(204, 204, 204);
-  margin-left: 20px;
+  margin-left: 10px;
   font-weight: lighter;
+  margin-top: -2px;
 }
 
 // .dropbtn:hover, .dropbtn:focus {
@@ -105,7 +112,7 @@
 // }
 
 .dropdown {
-  float: left;
+  display: flex;
   color: lightgrey;
   font-weight: bold;
 }
@@ -114,9 +121,10 @@
   display: none;
   position: absolute;
   background-color: rgb(17, 17, 17);
-  min-width: 160px;
+  min-width: 125px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  margin-top: 45px;
 }
 
 .dropdown-content a {
@@ -136,6 +144,26 @@
 }
 
 .app-container {
-  // margin: auto;
-  // width: 100vw;
+  margin-top: 45px;
+}
+
+.right-panel-elements {
+  display: flex;
+  background: image-url("right-panel-elements.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 75px;
+  margin-top: 7px;
+  margin-left: 90px;
+  margin-right: 15px;
+}
+
+.logout-button-box {
+  display: flex;
+  // margin-left: 50px;
+}
+
+.logout-panel-button {
+  margin-top: -35px;
 }

@@ -1,11 +1,10 @@
 import React from 'react';
-import ControlPanel from './../greeting/control_panel';
-import SessionLinks from './../greeting/session_links';
-import ShowIndexItem from './show_index_item';
-import { Link } from 'react-router-dom';
-import { setcurrentsong } from '../../actions/player_actions';
+import ControlPanel from '../greeting/control_panel';
+import SessionLinks from '../greeting/session_links';
+import SongBox from './song_box';
+import { setcurrentsong, pauseplayer } from '../../actions/player_actions';
 
-class UserShow extends React.Component {
+class UserPage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -15,15 +14,18 @@ class UserShow extends React.Component {
     setcurrentsong(song.id);
   }
 
+  pauseSong() {
+    pauseplayer();
+  }
+
   componentDidMount() {
     this.props.fetchuser(this.props.match.params.artistId);
-    // this.props.fetchsongs();
   }
 
   showPage() {
 
     let songObs = this.props.songs.map((song) => {
-      return <ShowIndexItem song={song} key={song.id} artist={this.props.user.username} playSong={this.playSong} />
+      return <SongBox song={song} key={song.id} artist={this.props.user.username} playSong={this.playSong} pauseSong={this.pauseSong} isplaying={this.props.isplaying}/>
     });
 
     return (
@@ -42,21 +44,21 @@ class UserShow extends React.Component {
 
             <div className="banner-buttons">
             
-              <ul className="show-page-links">
+              {/* <ul className="show-page-links">
                 <li><Link to=""><button className="show-page-link">All</button></Link></li>
                 <li><Link to=""><button className="show-page-link">Tracks</button></Link></li>
                 <li><Link to=""><button className="show-page-link">Albums</button></Link></li>
                 <li><Link to=""><button className="show-page-link">Playlists</button></Link></li>
                 <li><Link to=""><button className="show-page-link">Reposts</button></Link></li>
-              </ul>
+              </ul> */}
 
             </div>
 
-            <div className="social-buttons">
+            {/* <div className="social-buttons">
                 <button className="social-button1">Follow</button>
                 <button className="social-button">Share</button>
                 <button className="social-button">message</button>
-            </div>
+            </div> */}
 
           </div>
 
@@ -85,4 +87,4 @@ class UserShow extends React.Component {
 
 }
 
-export default UserShow;
+export default UserPage;

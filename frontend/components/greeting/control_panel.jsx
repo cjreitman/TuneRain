@@ -28,7 +28,7 @@ const controlPanel = (props) => {
             <Link to={`/wavecloud/${props.currentUser.id}/uploadsong`}><button className="right-panel-button">Upload</button></Link>
 
             <div className="dropdown">
-              <button onClick={myFunction} className="dropbtn">{props.currentUser.username}</button>
+              <button onClick={myFunction} className="dropbtn">{props.currentUser.username}▼</button>
                 <div id="myDropdown" className="dropdown-content">
                   <a href="#">Profile</a>
                   <a href="#">Likes</a>
@@ -38,17 +38,16 @@ const controlPanel = (props) => {
                   <a href="#">Tracks</a>
                 </div>
             </div>
-
-            {/* <div>
-              <Link to="/"><button className="right-panel-button"></button></Link>
-              <Link to="/"><button className="right-panel-button"></button></Link>
-            </div> */}
             
           </div>
 
+          <div className="right-panel-elements"></div>
+
           <div className="logout-button-box">
-            <button className="panel-button" onClick={props.logout}>Log Out</button>
+            <button className="logout-panel-button" onClick={props.logout}>Log Out</button>
           </div>
+
+          
         </section>
     </div>
   )

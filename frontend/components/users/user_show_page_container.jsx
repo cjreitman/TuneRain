@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import UserShow from './user_show_page';
+import UserShow from './user_page';
 import { fetchuser } from './../../actions/user_actions';
 import { logout } from './../../actions/session_actions';
 import { songSelector } from '../../reducers/selectors/song_selector';
-import { setcurrentsong } from './../../actions/player_actions';
+import { setcurrentsong, pauseplayer } from './../../actions/player_actions';
 
 const msp = (state, ownProps) => {
   let songs = Object.values(state.entities.songs);
@@ -16,7 +16,8 @@ const msp = (state, ownProps) => {
   return ({
     user: user,
     currentUser: state.entities.users[state.session.id],
-    songs: songs
+    songs: songs,
+    isplaying: state.isplaying
   });
 };
 
@@ -24,7 +25,8 @@ const mdp = (dispatch) => {
   return ({
     fetchuser: (id) => dispatch(fetchuser(id)),
     logout: () => dispatch(logout()),
-    setcurrentsong: (songId) => dispatch(setcurrentsong(songId))
+    setcurrentsong: (songId) => dispatch(setcurrentsong(songId)),
+    pauseplayer: () => dispatch(pauseplayer())
   });
 };
 

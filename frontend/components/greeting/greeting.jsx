@@ -22,7 +22,7 @@ class Greeting extends React.Component {
 
       <ControlPanel logout={this.props.logout} currentUser={this.props.currentUser}/>
 
-      <section>
+      <section className="songlist">
         <ul>{songs}</ul>
       </section>
     

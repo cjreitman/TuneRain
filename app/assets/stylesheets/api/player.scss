@@ -1,0 +1,125 @@
+.player {
+  background-color: rgb(242, 242, 242);
+  height: 46px;
+  width: 100vw;
+  font-size: 15px;
+  font-weight: lighter;
+  z-index: 10;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  display: flex;
+  justify-content: center;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 165px;
+}
+
+.player-box {
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+}
+
+.player-thing {
+  background: image-url("player-thing.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.share-volume-buttons {
+  background: image-url("shareandvolume.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 40px;
+  margin-top: 6px;
+}
+
+.right-player-elements {
+  background: image-url("right-player-elements.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 30px;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.prev-song-button {
+  background: image-url("prev-song-button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.next-song-button {
+  background: image-url("next-song.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.shuffle-song-button {
+  background: image-url("shuffle-song.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.repeat-song-button {
+  background: image-url("repeat-song.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 15x;
+  margin-right: 15px
+}
+
+.player-play-button {
+  background: image-url("play-button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.player-pause-button {
+  background: image-url("pause-button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.left-player-box {
+  margin-top: 5px;
+  display: flex;
+}

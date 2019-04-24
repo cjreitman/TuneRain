@@ -31,14 +31,32 @@ class Player extends React.Component {
 
   buttonSwitch() {
     if (this.props.isplaying) {
-      return ( <button onClick={() => this.pause()}>Pause</button> )
+      return ( <button className="player-pause-button" onClick={() => this.pause()}></button> )
     } else {
-      return ( <button onClick={() => this.play()} >Play</button> )
+      return ( <button className="player-play-button" onClick={() => this.play()} ></button> )
     }
   }
 
   render() {
-    return this.buttonSwitch()
+    return (
+      <div className="player-box">
+        <div className="player">
+          <div className="control-buttons" >
+            <div className="left-player-box">
+              <button className="prev-song-button"></button>
+              {this.buttonSwitch()}
+              <button className="next-song-button"></button>
+              <button className="shuffle-song-button"></button>
+              <button className="repeat-song-button"></button>
+            </div>
+            <div className="player-thing"></div>
+            <div className="share-volume-buttons"></div>
+            <div className="right-player-elements" ></div>
+          </div>
+        </div>
+      </div>
+      
+    )
   }
 
 }
