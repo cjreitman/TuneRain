@@ -15,9 +15,9 @@
 }
 
 .profile-username-box {
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 275px;
-  // background-color: black;
+  overflow: auto;
   color: white;
   width: 175px;
   font-family: sans-serif;
@@ -31,7 +31,6 @@
   padding: 10px;
   padding-top: 15px;
   padding-bottom: 15px;
-  margin-top: -15px;
   margin-left: -10px;
 }
 

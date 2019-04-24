@@ -99,7 +99,7 @@
 }
 
 .player-play-button {
-  background: image-url("play-button.png");
+  background: image-url("play-button2.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 20px;
@@ -110,13 +110,14 @@
 }
 
 .player-pause-button {
-  background: image-url("pause-button.png");
+  background: image-url("pausebutton2.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
   margin-top: 7px;
-  margin-left: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .left-player-box {
