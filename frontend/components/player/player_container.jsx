@@ -10,7 +10,6 @@ const msp = (state) => {
   if ( state.currentsong ) {
     currentsong = currentSongSelector(state.entities.songs, state.currentsong);
   }
-  // debugger;
   return ({
     isplaying: state.isplaying,
     currentsong: currentsong
