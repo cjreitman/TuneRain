@@ -6,7 +6,21 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "red", right: "25px", }}
+      style={{ 
+        ...style, 
+        display: "flex", 
+        background: "rgb(235, 235, 235)", 
+        right: "-2px", 
+        width: "35px", 
+        height: "35px", 
+        justifyContent: "center", 
+        alignItems: "center", 
+        borderRadius: "5px",
+        borderWidth: "1px",
+        borderStyle: "solid",
+        borderColor: "grey",
+        marginTop: "-25px"
+      }}
       onClick={onClick}
     />
   );
@@ -17,7 +31,21 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green", left: "-10px", zIndex: 10, }}
+      style={{ 
+          ...style, 
+          display: "flex", 
+          background: "rgb(235, 235, 235)", 
+          left: "-20px", 
+          zIndex: 10, width: "35px", 
+          height: "35px", 
+          justifyContent: "center", 
+          alignItems: "center", 
+          borderRadius: "5px",
+          borderWidth: "1px",
+          borderStyle: "solid",
+          borderColor: "grey",
+          marginTop: "-25px"
+      }}
       onClick={onClick}
     />
   );
@@ -40,31 +68,7 @@ export default class SimpleSlider extends Component {
       
       <div className="container-slider">
         <Slider {...settings}>
-
-          <div> 
-            <div className="slide"></div>
-          </div>
-
-          <div>
-            <div className="slide"></div>
-          </div>
-
-          <div>
-            <div className="slide"></div>
-          </div>
-
-          <div>
-            <div className="slide"></div>
-          </div>
-
-          <div>
-            <div className="slide"></div>
-          </div>
-
-          <div>
-            <div className="slide"></div>
-          </div>
-
+          {this.props.songs}
         </Slider>
       </div>
     );
