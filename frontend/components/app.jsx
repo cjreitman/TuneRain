@@ -21,11 +21,10 @@ const App = () => (
       <ProtectedRoute exact path="/wavecloud/:userId/uploadsong" component={SongFormContainer}/>
       <Route component={NoMatch} />
     </Switch>
-
     <footer>
       <PlayerContainer/>
     </footer>
-
+    
   </div>
   
 );

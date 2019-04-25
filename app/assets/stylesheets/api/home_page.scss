@@ -1,0 +1,35 @@
+.home-page {
+  display: flex;
+  max-width: 1300px;
+  margin: auto;
+  min-width: 900px;
+  // margin-left: 50px;
+}
+
+.right-console {
+  width: 400px;
+  min-width: 400px;
+  height: 800px;
+  // overflow: auto;
+  background: image-url("right-console.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: auto;
+  margin-right: 35px;
+  margin-top: 15px;
+}
+
+.song-page-banner {
+  color: rgb(51, 51, 51);
+  font-size: 23px;
+  margin-top: 50px;
+  margin-left: 110px;
+  margin-bottom: 5px;
+}
+
+.song-page-description {
+  font-size: 14px;
+  color: rgb(153, 153, 153);
+  margin-left: 110px;
+  // margin-top:
+}

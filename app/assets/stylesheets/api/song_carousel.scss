@@ -1,0 +1,30 @@
+.slide {
+  background-repeat: no-repeat;
+  background: image-url("lotus.jpeg");
+  background-size: contain;
+  height: 150px;
+  width: 150px;
+}
+
+.container-slider {
+  
+  margin: auto;
+  padding: 40px;
+  height: 150px;
+  width: 750px;
+  color: #333;
+  min-height: 0;
+  min-width: 0;
+  margin-left: 70px;
+  margin-bottom: -50px;
+  margin-top: -25px;
+  margin-right: -25px;
+}
+
+.slick-next:before {
+  padding: 10px;
+}
+
+.slick-next {
+  right: 50px;
+}
