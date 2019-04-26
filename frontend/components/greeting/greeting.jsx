@@ -30,7 +30,7 @@ class Greeting extends React.Component {
 
     return (
       
-    <div>
+    <div className="home-page-wrapper">
       
       <ControlPanel logout={this.props.logout} currentUser={this.props.currentUser}/>
       <div className="home-page">

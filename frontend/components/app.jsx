@@ -13,6 +13,7 @@ import PlayerContainer from './player/player_container';
 
 const App = () => (
   <div className="app-container">
+    
     <Switch>
       <Route exact path="/" component={GreetingContainer}/>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
@@ -21,6 +22,7 @@ const App = () => (
       <ProtectedRoute exact path="/wavecloud/:userId/uploadsong" component={SongFormContainer}/>
       <Route component={NoMatch} />
     </Switch>
+    <div className="white-background"></div>
     <footer>
       <PlayerContainer/>
     </footer>
