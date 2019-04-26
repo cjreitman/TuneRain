@@ -4,13 +4,14 @@ import Greeting from './greeting';
 import { fetchsongs } from './../../actions/song_actions';
 import { fetchusers } from './../../actions/user_actions';
 
-const mapStateToProps = ({ session, entities: { users, songs } }) => {
+const mapStateToProps = ({ session, isplaying, entities: { users, songs } }) => {
   let sings = Object.values(songs);
   // debugger;
   return {
     users: users,
     currentUser: users[session.id],
-    songs: sings
+    songs: sings,
+    isplaying: isplaying
   };
 };
 

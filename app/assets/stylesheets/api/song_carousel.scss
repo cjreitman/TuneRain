@@ -4,8 +4,9 @@
   background-size: contain;
   height: 170px;
   width: 170px;
-  // margin-left: -15px;
-  // margin-right: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-slider {
@@ -29,4 +30,26 @@
 
 .slick-next {
   right: 50px;
+}
+
+.player-play-buttonx {
+  background: image-url("play-button2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 75px;
+  margin-top: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.player-pause-buttonx {
+  background: image-url("pausebutton2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 75px;
+  margin-top: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
 }

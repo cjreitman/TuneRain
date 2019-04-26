@@ -4,11 +4,19 @@ import SongIndexItem from './../songs/song_index_item';
 import ControlPanel from './control_panel';
 import SessionLinks from './session_links';
 import SimpleSlider from './song_carousel';
-
+import { setcurrentsong, pauseplayer } from '../../actions/player_actions';
 
 class Greeting extends React.Component { 
   constructor(props) {
     super(props);
+  }
+
+  playSong(song) {
+    setcurrentsong(song.id);
+  }
+
+  pauseSong() {
+    pauseplayer();
   }
 
   componentDidMount() {
@@ -17,16 +25,8 @@ class Greeting extends React.Component {
 
   homePage() {
     let songs = this.props.songs.map((song) => {
-      return  <div key={song.id} ><SongIndexItem  song={song}  /> <div> <Link to={`/wavecloud/${song.artist_id}`} className="uploader" >{this.props.users[song.artist_id].username}</Link> </div> </div>  
+      return  <div key={song.id} ><SongIndexItem  song={song} playSong={this.playSong} pauseSong={this.pauseSong} isplaying={this.props.isplaying} /> <div> <Link to={`/wavecloud/${song.artist_id}`} className="uploader" >{this.props.users[song.artist_id].username}</Link> </div> </div>  
     })
-
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
 
     return (
       
