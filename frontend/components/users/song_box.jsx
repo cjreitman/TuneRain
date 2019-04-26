@@ -15,6 +15,12 @@ class SongBox extends React.Component {
     }
   }
 
+  deleteSongButton() {
+    if ( this.props.song.artist_id === this.props.currentUser.id ) {
+      return <div><button onClick={() => this.props.deleteSong(this.props.song.id) }className="delete-song-button">Delete Song</button></div>
+    }
+  }
+
   render() {
     return (
       <div className="song-box">
@@ -32,7 +38,7 @@ class SongBox extends React.Component {
   
         <div className="sound-bar" ></div>
   
-        <div className="comments" ></div>
+        {this.deleteSongButton()}
   
       </div>
     )

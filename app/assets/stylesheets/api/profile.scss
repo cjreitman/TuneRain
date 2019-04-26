@@ -5,6 +5,7 @@
 }
 
 .profile-header {
+  display: flex;
   margin-left: 25px;
   width: 1125px;
   min-width: 1125px;
@@ -12,11 +13,13 @@
   background: image-url("coverphoto.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  // margin-top: 121px;
+  top: 0px;
 }
 
 .profile-username-box {
   margin-top: 20px;
-  margin-left: 275px;
+  margin-left: 25px;
   overflow: auto;
   color: white;
   width: 175px;
@@ -39,6 +42,7 @@
 }
 
 .profile-pic {
+  display: flex;
   background-repeat: no-repeat;
   background: image-url("chris.jpg");
   background-size: contain;
@@ -46,7 +50,7 @@
   width: 200px;
   margin-left: 40px;
   border-radius: 50%;
-  margin-top: -75px;
+  margin-top: 25px;
 }
 
 .spotlight {
@@ -128,10 +132,16 @@
   margin-top: -500px;
 }
 
+.song-box-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .song-box {
   min-width: 500px;
-  margin-bottom: -100px;
+  margin-bottom: -25px;
   margin-left: 40px;
+  // margin-top: 50px;
 }
 
 .album-cover {
@@ -176,6 +186,7 @@
 
 .sound-bar-wrapper {
   clear: both;
+  // margin-bottom: -10px;
 }
 
 .sound-bar {
@@ -186,18 +197,19 @@
   background-repeat: no-repeat;
   margin-left: 185px;
   margin-top: -150px;
+  margin-bottom: -35px;
 }
 
-.comments {
-  background: image-url("comments&likes.png");
-  width: 600px;
-  height: 300px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: -20px;
-  margin-left: 185px;
-  margin-bottom: 20px;
-}
+// .comments {
+//   background: image-url("comments&likes.png");
+//   width: 600px;
+//   height: 300px;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   margin-top: -20px;
+//   margin-left: 185px;
+//   margin-bottom: 20px;
+// }
 
 .follower-box {
   background: image-url("followers.png");
@@ -207,4 +219,9 @@
   background-repeat: no-repeat;
   margin-left: 825px;
   clear: both;
+}
+
+.delete-song-button {
+  margin-left: 17px;
+  font-size: 12px;
 }

@@ -24,7 +24,7 @@ class Api::SongsController < ApplicationController
   def destroy
     @song = Song.find(params[:id])
     @song.delete
-    render :index
+    render :show
   end
 
   def update

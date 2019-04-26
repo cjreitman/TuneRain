@@ -57,7 +57,7 @@ export const updateSong = (song) => {
   };
 };
 
-export const deleteSong = (id) => {
+export const deletesong = (id) => {
   return (dispatch) => {
     return ApiUtil.deleteSong(id).then((song) =>{
       return dispatch(removeSong(song));

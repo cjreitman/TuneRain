@@ -4,6 +4,7 @@ import { fetchuser } from './../../actions/user_actions';
 import { logout } from './../../actions/session_actions';
 import { songSelector } from '../../reducers/selectors/song_selector';
 import { setcurrentsong, pauseplayer } from './../../actions/player_actions';
+import { deletesong } from './../../actions/song_actions';
 
 const msp = (state, ownProps) => {
   let songs = Object.values(state.entities.songs);
@@ -26,7 +27,8 @@ const mdp = (dispatch) => {
     fetchuser: (id) => dispatch(fetchuser(id)),
     logout: () => dispatch(logout()),
     setcurrentsong: (songId) => dispatch(setcurrentsong(songId)),
-    pauseplayer: () => dispatch(pauseplayer())
+    pauseplayer: () => dispatch(pauseplayer()),
+    deletesong: (songId) => dispatch(deletesong(songId))
   });
 };
 

@@ -11,11 +11,9 @@ class SongIndexItem extends React.Component {
 
   buttonSwitch() {
     if (this.props.isplaying) {
-      debugger;
       let hovered = this.state.hover ? "player-pause-buttonx" : "hidden";
       return ( <button className={hovered} onClick={() => this.props.pauseSong()}></button> )
     } else {
-      debugger;
       let hovered = this.state.hover ? "player-play-buttonx" : "hidden";
       return ( <button className={hovered} onClick={() => this.props.playSong(this.props.song)} ></button> )
     }

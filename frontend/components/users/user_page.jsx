@@ -8,6 +8,7 @@ class UserPage extends React.Component {
 
   constructor(props) {
     super(props);
+    this.deleteSong = this.deleteSong.bind(this);
   }
 
   playSong(song) {
@@ -22,43 +23,41 @@ class UserPage extends React.Component {
     this.props.fetchuser(this.props.match.params.artistId);
   }
 
+  deleteSong(songId) {
+    this.props.deletesong(songId);
+  }
+
   showPage() {
 
     let songObs = this.props.songs.map((song) => {
-      return <SongBox song={song} key={song.id} artist={this.props.user.username} playSong={this.playSong} pauseSong={this.pauseSong} isplaying={this.props.isplaying}/>
+      return <SongBox currentUser={this.props.currentUser} 
+        song={song} 
+        key={song.id} 
+        artist={this.props.user.username} 
+        playSong={this.playSong} 
+        pauseSong={this.pauseSong} 
+        deleteSong={this.deleteSong}
+        isplaying={this.props.isplaying}/>
     });
 
     return (
       <>
         <ControlPanel logout={this.props.logout} currentUser={this.props.currentUser}/>
         <div className="profile-wrapper"> 
+        
           <div className="profile-header">
+          <div className="profile-pic"></div>
             <div className="profile-username-box">
               <h3 className="profile-username">{this.props.user.username}</h3>
             </div>
-            <div className="profile-div" ></div>
-            <div className="profile-pic"></div>
+            
           </div>
 
           <div className="button-div">
 
             <div className="banner-buttons">
-            
-              {/* <ul className="show-page-links">
-                <li><Link to=""><button className="show-page-link">All</button></Link></li>
-                <li><Link to=""><button className="show-page-link">Tracks</button></Link></li>
-                <li><Link to=""><button className="show-page-link">Albums</button></Link></li>
-                <li><Link to=""><button className="show-page-link">Playlists</button></Link></li>
-                <li><Link to=""><button className="show-page-link">Reposts</button></Link></li>
-              </ul> */}
 
             </div>
-
-            {/* <div className="social-buttons">
-                <button className="social-button1">Follow</button>
-                <button className="social-button">Share</button>
-                <button className="social-button">message</button>
-            </div> */}
 
           </div>
 
@@ -67,7 +66,7 @@ class UserPage extends React.Component {
           <h4 className="spotlight-banner"></h4>
 
           <div className="spotlight">
-            <ul>
+            <ul className="song-box-list">
               {songObs}
             </ul>
 

@@ -10,13 +10,13 @@
   width: 400px;
   min-width: 400px;
   height: 800px;
-  // overflow: auto;
   background: image-url("right-console.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   margin: auto;
-  margin-right: -0px;
+  margin-left: 890px;
   margin-top: 15px;
+  position: fixed;
 }
 
 .song-page-banner {
@@ -43,4 +43,11 @@
 .uploader {
   color: rgb(153, 153, 153);
   font-size: 12px;
+}
+
+.slider-divider {
+  height: 1px;
+  width: 760px;
+  background: lightgrey;
+  margin-left: 100px;
 }
