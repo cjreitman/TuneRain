@@ -12,7 +12,7 @@ const sessionLinks = () => {
           </div>
 
           </Link> 
-          <Link to="/" style={{ textDecoration: 'none', color: 'white' }} ><h2 className="brand" >WAVECLOUD</h2></Link> 
+          <Link to="/" style={{ textDecoration: 'none', color: 'white' }} ><h2 className="brand" >TUNERAIN</h2></Link> 
         </div>
         
         
@@ -23,10 +23,10 @@ const sessionLinks = () => {
         </nav>
 
       </div>
-        <h2 className="front-hero"> What's next in music is first in WaveCloud</h2>
+        <h2 className="front-hero"> What's next in music is first in TunRain</h2>
         <p className="front-sidekick">
         Upload your first track and begin your journey.<br></br>
-        WaveCloud gives you space to create, 
+        TuneRain gives you space to create, 
         find your fans, and connect with other artists.
         </p>
         <div className="button-wrapper"> <Link to="signup"><button className="upload-button">Start uploading today</button></Link> </div>

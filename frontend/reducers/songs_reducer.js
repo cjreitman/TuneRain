@@ -1,4 +1,4 @@
-import { RECEIVE_SONG, RECEIVE_SONGS, REMOVE_SONG } from '../actions/song_actions';
+import { RECEIVE_SONG, RECEIVE_SONGS, REMOVE_SONG, ADD_PLAYLIST_SONG } from '../actions/song_actions';
 import { RECEIVE_USER } from './../actions/user_actions';
 import { merge } from 'lodash';
 

@@ -29,6 +29,11 @@ class Player extends React.Component {
     this.props.pauseplayer();
   }
 
+  previousSong() {
+    // let prevSong = this.props.playlist[this.props.playlistindex - 1];
+    // this.props.setcurrentsong(prevSong);
+  }
+
   buttonSwitch() {
     if (this.props.isplaying) {
       return ( <button className="player-pause-button" onClick={() => this.pause()}></button> )
@@ -43,7 +48,7 @@ class Player extends React.Component {
         <div className="player">
           <div className="control-buttons" >
             <div className="left-player-box">
-              <button className="prev-song-button"></button>
+              <button className="prev-song-button" onClick={() => this.previousSong()}></button>
               {this.buttonSwitch()}
               <button className="next-song-button"></button>
               <button className="shuffle-song-button"></button>

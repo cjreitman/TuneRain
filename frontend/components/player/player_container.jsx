@@ -12,7 +12,9 @@ const msp = (state) => {
   }
   return ({
     isplaying: state.isplaying,
-    currentsong: currentsong
+    currentsong: currentsong,
+    playlist: state.playlist,
+    playlistindex: state.playlistindex
   });
 };
 
@@ -20,7 +22,7 @@ const mdp = (dispatch) => {
   return ({
     pauseplayer: () => dispatch(pauseplayer()),
     startplayer: () => dispatch(startplayer()),
-    setcurrentsong: () => dispatch(setcurrentsong())
+    setcurrentsong: (id) => dispatch(setcurrentsong(id))
   });
 };
 

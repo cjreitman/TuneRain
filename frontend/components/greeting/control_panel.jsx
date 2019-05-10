@@ -12,8 +12,8 @@ const controlPanel = (props) => {
 
           <div className="panel-buttons">
             <Link to="/"><button className="panel-button">Home</button></Link>
-            <Link to="/"><button className="panel-button">Stream</button></Link>
-            <Link to="/"><button className="panel-button">Library</button></Link>
+            <Link to="#"><button className="panel-button">Stream</button></Link>
+            <Link to="#"><button className="panel-button">Library</button></Link>
           </div>
 
           <div className="header-search-box1">
@@ -30,7 +30,7 @@ const controlPanel = (props) => {
             <div className="dropdown">
               <button onClick={myFunction} className="dropbtn">{props.currentUser.username}▼</button>
                 <div id="myDropdown" className="dropdown-content">
-                  <a href="#">Profile</a>
+                  <Link to={`/wavecloud/${props.currentUser.id}`}>Profile</Link>
                   <a href="#">Likes</a>
                   <a href="#">Stations</a>
                   <a href="#">Who to follow</a>

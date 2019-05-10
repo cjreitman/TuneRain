@@ -51,7 +51,7 @@ export const createSong = (user_id, song) => {
 
 export const updateSong = (song) => {
   return (dispatch) => {
-    return ApiUtil.updateSong(song).then((song) =>{
+    return ApiUtil.updateSong(song).then((song) => {
       return dispatch(receiveSong(song));
     });
   };
@@ -59,7 +59,7 @@ export const updateSong = (song) => {
 
 export const deletesong = (id) => {
   return (dispatch) => {
-    return ApiUtil.deleteSong(id).then((song) =>{
+    return ApiUtil.deleteSong(id).then((song) => {
       return dispatch(removeSong(song));
     });
   };
