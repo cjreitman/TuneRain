@@ -1,12 +1,13 @@
 
-import { RECEIVE_CURRENT_SONG } from '../actions/player_actions';
-import { merge } from 'lodash';
+import { SUBTRACT_INDEX, RECEIVE_INDEX } from '../actions/player_actions';
 
 const playlistIndexReducer = (state = 0, action) => {
   let newState;
   switch(action.type) {
-      case RECEIVE_CURRENT_SONG:
-        newState = state + 1;
+      case RECEIVE_INDEX: 
+        return action.index;
+      case SUBTRACT_INDEX:
+        newState = state - 1;
         return newState;
     default:
       return state;

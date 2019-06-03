@@ -30,8 +30,21 @@ class Player extends React.Component {
   }
 
   previousSong() {
-    // let prevSong = this.props.playlist[this.props.playlistindex - 1];
-    // this.props.setcurrentsong(prevSong);
+
+    if ( this.props.playlistindex !== 0 ) {
+      let prevSong = this.props.playlist[this.props.playlistindex - 1];
+      this.props.setcurrentsong(prevSong);
+      this.props.prevSong();
+    } 
+
+    if ( this.props.playlistindex === 0 ) {
+      let index = Object.keys(this.props.playlist).length;
+      let prevSong = this.props.playlist[index - 1];
+      this.props.setcurrentsong(prevSong);
+      this.props.prevSong();
+      this.props.setIndex(index - 1);
+    }
+
   }
 
   buttonSwitch() {
@@ -51,12 +64,12 @@ class Player extends React.Component {
               <button className="prev-song-button" onClick={() => this.previousSong()}></button>
               {this.buttonSwitch()}
               <button className="next-song-button"></button>
-              <button className="shuffle-song-button"></button>
-              <button className="repeat-song-button"></button>
+              {/* <button className="shuffle-song-button"></button>
+              <button className="repeat-song-button"></button> */}
             </div>
-            <div className="player-thing"></div>
-            <div className="share-volume-buttons"></div>
-            <div className="right-player-elements" ></div>
+            {/* <div className="player-thing"></div> */}
+            {/* <div className="share-volume-buttons"></div> */}
+            {/* <div className="right-player-elements" ></div> */}
           </div>
         </div>
       </div>

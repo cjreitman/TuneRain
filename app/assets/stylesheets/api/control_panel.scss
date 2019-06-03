@@ -48,13 +48,10 @@
 }
 
 .panel-button {
-  width: 60px;
   background: transparent;
   border: none;
   cursor: pointer;
   color: lightgrey;
-  margin-right: 15px;
-  margin-left: 15px;
 }
 
 .header-search-box1 {
@@ -77,21 +74,21 @@
 
 .right-panel-button {
   padding: 14px;
-  width: 30px;
+  width: 60px;
   background: transparent;
   border: none;
   cursor: pointer;
   color: rgb(204, 204, 204);
-  // font-weight: bold;
   font-weight: lighter;
-  float: left;
-  margin-left: 25px;
 
 }
 
-// .right-button-box {
-  
-// }
+.right-button-box {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  margin: auto;
+}
 
 .dropbtn {
   display: flex;
@@ -102,7 +99,7 @@
   cursor: pointer;
   // color: lightgrey;
   color: rgb(204, 204, 204);
-  margin-left: 10px;
+  // margin-left: 10px;
   font-weight: lighter;
   margin-top: -2px;
 }

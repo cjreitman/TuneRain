@@ -53,15 +53,15 @@ class UserPage extends React.Component {
             
           </div>
 
-          <div className="button-div">
+          {/* <div className="button-div">
 
             <div className="banner-buttons">
 
             </div>
 
-          </div>
+          </div> */}
 
-          <div className="follower-box"></div>
+          {/* <div className="follower-box"></div> */}
 
           <h4 className="spotlight-banner"></h4>
 

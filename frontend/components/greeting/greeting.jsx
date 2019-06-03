@@ -61,7 +61,7 @@ class Greeting extends React.Component {
           <p className="song-page-description">Chill tunes</p>
         </section>
 
-        <div className="right-console"></div>
+        {/* <div className="right-console"></div> */}
       </div>
 
     </div>)

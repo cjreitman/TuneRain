@@ -1,7 +1,7 @@
 
 import Player from './player';
 import { connect } from 'react-redux';
-import { setcurrentsong, pauseplayer, startplayer } from './../../actions/player_actions';
+import { setcurrentsong, pauseplayer, startplayer, prevSong, setIndex } from './../../actions/player_actions';
 import { currentSongSelector } from './../../reducers/selectors/current_song_selector';
 
 const msp = (state) => {
@@ -22,7 +22,9 @@ const mdp = (dispatch) => {
   return ({
     pauseplayer: () => dispatch(pauseplayer()),
     startplayer: () => dispatch(startplayer()),
-    setcurrentsong: (id) => dispatch(setcurrentsong(id))
+    setcurrentsong: (id) => dispatch(setcurrentsong(id)),
+    prevSong: () => dispatch(prevSong()),
+    setIndex: (index) => dispatch(setIndex(index))
   });
 };
 
