@@ -1,7 +1,7 @@
 .slide {
-  background: image-url("bloud.jpg");
+  background: image-url("t.jpg");
   background-repeat: no-repeat;
-  background-size: 200px 200px;
+  background-size: contain;
   height: 170px;
   width: 170px;
   display: flex;
@@ -17,10 +17,8 @@
   color: #333;
   min-height: 0;
   min-width: 0;
-  margin-left: 70px;
   margin-bottom: 70px;
   margin-top: -25px;
-  margin-right: -25px;
 }
 
 .slick-next:before {

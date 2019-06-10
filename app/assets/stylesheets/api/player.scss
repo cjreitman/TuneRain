@@ -10,13 +10,11 @@
   border-color: grey;
   display: flex;
   justify-content: center;
-  min-width: 1200px;
 }
 
 .control-buttons {
   display: flex;
   justify-content: flex-start;
-  margin-left: 165px;
   z-index: 50;
 }
 
@@ -24,6 +22,7 @@
   margin: auto;
   position: fixed;
   bottom: 0;
+  z-index: 3;
 }
 
 .player-thing {
@@ -125,6 +124,7 @@
 .left-player-box {
   margin-top: 5px;
   display: flex;
+  justify-content: center;
   z-index: 50;
   min-width: 210px;
 }
