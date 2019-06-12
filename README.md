@@ -19,6 +19,10 @@ TuneRain, a SoundCloud clone, is an application enabling users to upload and lis
 
 ![image](https://user-images.githubusercontent.com/46357004/59389503-727f2480-8d3c-11e9-8f58-ba1cfb0ced9c.png)
 
+
+![image](https://user-images.githubusercontent.com/46357004/59389564-9e9aa580-8d3c-11e9-8ebb-b25e7b21fd79.png)
+
+
 ## Authors
 
 * **Colin Reitman**
