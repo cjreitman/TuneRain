@@ -1,24 +1,18 @@
-# README
+# TuneRain
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TuneRain, a SoundCloud clone, is an application enabling users to upload and listen to music.
 
-Things you may want to cover:
+# Technologies
 
-* Ruby version
+* [React.js](https://reactjs.org)
+* [Redux.js](https://redux.js.org)
+* [Ruby on Rails](https://guides.rubyonrails.org)
+* [PostgreSQL](https://www.postgresql.org)
 
-* System dependencies
+# Images
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+## Authors
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* **Colin Reitman**
