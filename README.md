@@ -30,6 +30,33 @@ The upload song page.
 ![image](https://user-images.githubusercontent.com/46357004/59389624-be31ce00-8d3c-11e9-8ba3-0a6c17f43354.png)
 User profile, enabling users to view songs that have been submitted by that user and, if this is the logged-in users profile, the option to delete songs.
 
+# Code Highlights
+
+```js
+componentDidUpdate(oldProps) {
+    if ( this.props.currentsong ) {
+      if (this.props.isplaying === true) {
+        if ( !oldProps.currentsong || this.props.currentsong.url != oldProps.currentsong.url ) {
+          this.audio.src = this.props.currentsong.url;
+        }
+        this.audio.play();
+      } else if ( this.props.isplaying === false ) {
+        this.audio.pause();
+      }
+    }
+  }
+
+  play() {
+    this.props.startplayer();
+  }
+
+  pause() {
+    this.props.pauseplayer();
+  }
+
+
+```
+
 
 ## Authors
 
